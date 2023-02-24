@@ -17,9 +17,26 @@ class _CommonPageState extends State<CommonPage> {
         title: const Text('Common Widgets'),
         centerTitle: true,
       ),
-      body: const SafeArea(
+      body: SafeArea(
         child: Center(
-          child: Text('sss'),
+          child: Column(
+            children: [
+              ElevatedButton(
+                onPressed: () {
+                  showAboutDialog(
+                    applicationIcon: const FlutterLogo(),
+                    applicationVersion: 'Version 1.0.0 1',
+                    applicationName: 'Flutter Common Widgets',
+                    context: context,
+                    children: [
+                      const Text('This is common widgets application'),
+                    ],
+                  );
+                },
+                child: const Text('Show About Dialog'),
+              )
+            ],
+          ),
         ),
       ),
     );
