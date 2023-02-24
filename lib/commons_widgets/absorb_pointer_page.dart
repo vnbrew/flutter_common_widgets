@@ -11,6 +11,9 @@ class _AbsorbPointerPageState extends State<AbsorbPointerPage> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+      appBar: AppBar(
+        title: const Text('AbsorbPointer'),
+      ),
       body: Center(
         child: Stack(
           alignment: Alignment.center,

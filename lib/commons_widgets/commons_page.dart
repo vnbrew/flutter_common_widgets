@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter/src/widgets/framework.dart';
 import 'package:flutter/src/widgets/placeholder.dart';
 import 'package:flutter_common_widgets/commons_widgets/absorb_pointer_page.dart';
+import 'package:flutter_common_widgets/commons_widgets/align_page.dart';
 
 class CommonPage extends StatefulWidget {
   const CommonPage({super.key});
@@ -22,6 +23,17 @@ class _CommonPageState extends State<CommonPage> {
         child: Center(
           child: Column(
             children: [
+              ElevatedButton(
+                onPressed: () {
+                  const newPage = AlignPage();
+                  Navigator.push(
+                    context,
+                    // ignore: inference_failure_on_instance_creation
+                    MaterialPageRoute(builder: (context) => newPage),
+                  );
+                },
+                child: const Text('Align & AnimatedAlign'),
+              ),
               ElevatedButton(
                 onPressed: () {
                   const newPage = AbsorbPointerPage();
